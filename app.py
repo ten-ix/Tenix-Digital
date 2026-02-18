@@ -73,6 +73,11 @@ st.markdown("""
         border-radius: 10px 10px 0 0;
         margin-top: 50px;
     }
+      @media (max-width: 768px) {
+        .service-card {
+            margin-bottom: 15px;
+        }
+    }
     </style>
     """, unsafe_allow_html=True)
 
@@ -91,6 +96,9 @@ with col2:
     st.subheader("Your Vision, Our Code. Local Businesses, Global Presence.")
 
 st.divider()
+
+theme=Image.open("theme.png")
+st.image(theme, width= 250)
 
 # 4. Service Menu (The Clickable Part)
 st.write("### Choose Your Digital Transformation")
@@ -139,9 +147,11 @@ with col_f3:
 with col_a:
     st.markdown(f"""
     <div class="service-card">
-        <h3>📄 Static Site</h3>
-        <p>Perfect for Doctors, Lawyers, and Small Shops. A digital brochure that works 24/7.</p>
-        <p><b>Starts at ₹1,999</b></p>
+        <div class="card-content">
+            <h3>📄 Static Site</h3>
+            <p>Perfect for Doctors and Small Shops. A digital brochure that works 24/7.</p>
+            <p><b>Starts at ₹1,999</b></p>
+        </div>
         <a href="{get_wa_link('Static Site')}" target="_blank" class="wa-button">Order on WhatsApp</a>
     </div>
     """, unsafe_allow_html=True)
@@ -149,19 +159,23 @@ with col_a:
 with col_b:
     st.markdown(f"""
     <div class="service-card" style="border-left-color: #28a745;">
-        <h3>⚡ Dynamic App</h3>
-        <p>For Cafes & Gyms. Manage menus, prices, and member logins in real-time.</p>
-        <p><b>Starts at ₹4,999</b></p>
-        <a href="{get_wa_link('Dynamic App')}" target="_blank" class="wa-button">Order on WhatsApp</a>
+        <div class="card-content">
+            <h3>⚡ Dynamic Site</h3>
+            <p>For Cafes & Gyms. Manage menus, prices, and member logins in real-time.</p>
+            <p><b>Starts at ₹4,999</b></p>
+        </div>
+        <a href="{get_wa_link('Dynamic Site')}" target="_blank" class="wa-button">Order on WhatsApp</a>
     </div>
     """, unsafe_allow_html=True)
 
 with col_c:
     st.markdown(f"""
     <div class="service-card" style="border-left-color: #6c757d;">
+    <div class="card-content">
         <h3>📊 Business Dashboard</h3>
         <p>For Distributors, wedding halls & Schools. Track sales, inventory, or student records in a private secure portal.</p>
         <p><b>Custom Pricing</b></p>
+        </div>
         <a href="{get_wa_link('Custom Dashboard')}" target="_blank" class="wa-button">Consult Us</a>
     </div>
     """, unsafe_allow_html=True)
