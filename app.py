@@ -74,15 +74,16 @@ st.markdown("""
     footer {
         background-color: #000000;
         color: white;
-    }
-
-    /* If you created a custom div for your footer links */
-    .custom-footer {
+    }.black-footer {
         background-color: #000000;
         color: white;
-        padding: 20px;
-        border-radius: 10px 10px 0 0;
+        padding: 40px 20px;
+        border-radius: 20px 20px 0 0; /* Rounds the top corners */
         margin-top: 50px;
+    }
+    /* This makes sure the text inside the footer stays white */
+    .black-footer p, .black-footer h3 {
+        color: white !important;
     }
       @media (max-width: 768px) {
         .service-card {
@@ -125,7 +126,7 @@ col_a, col_b, col_c = st.columns(3)
 
 st.success("📍 Based in Your Town | 🚀 Websites delivered within 48-72 hours")
 # --- FOOTER SECTION ---
-st.divider()
+st.markdown('<div class="black-footer">', unsafe_allow_html=True)
 col_f1, col_f2, col_f3 = st.columns(3)
 
 with col_f1:
@@ -154,7 +155,8 @@ with col_f2:
 
 with col_f3:
     st.write("© 2026 Tenix Parent Company")
-
+    st.markdown("<p style='text-align: right; margin-top: 10px;'>© 2026 Tenix Parent Company</p>", unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
 with col_a:
     st.markdown(f"""
     <div class="service-card">
