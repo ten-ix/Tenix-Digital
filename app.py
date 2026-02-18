@@ -76,7 +76,7 @@ st.write("### Choose Your Digital Transformation")
 def get_wa_link(service_name):
     base_msg = f"Hi Tenix Digital! I am interested in your {service_name} for my business."
     # Replace with YOUR actual number (include country code)
-    phone_number = "91XXXXXXXXXX" 
+    phone_number = "919301868258" 
     return f"https://wa.me/{phone_number}?text={base_msg.replace(' ', '%20')}"
 
 col_a, col_b, col_c = st.columns(3)
