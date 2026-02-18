@@ -31,8 +31,17 @@ st.markdown("""
         box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         transition: transform 0.3s ease;
         margin-bottom: 20px;
-        height: 250px;
+        
+        /* The Magic Parts */
+        display: flex;
+        flex-direction: column;
+        height: 100%; /* Makes cards in the same row equal height */
     }
+
+    .card-content {
+        flex-grow: 1; /* This pushes everything else down */
+    }
+
     .service-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 10px 15px rgba(0,0,0,0.2);
