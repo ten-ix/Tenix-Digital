@@ -81,6 +81,37 @@ def get_wa_link(service_name):
 
 col_a, col_b, col_c = st.columns(3)
 
+# --- FOOTER SECTION ---
+st.divider()
+col_f1, col_f2, col_f3 = st.columns(3)
+
+with col_f1:
+    if st.button("Terms of Service"):
+        @st.dialog("Terms of Service")
+        def tos():
+            st.write("""
+            **1. Services:** Tenix Digital provides web development services as described in the selected package.
+            **2. Payments:** A 50% advance is required to start. Final files/access are handed over upon 100% payment.
+            **3. Hosting:** We provide free hosting on community tiers. For custom domains or high-traffic needs, the client must pay third-party hosting costs.
+            **4. Liability:** Tenix Digital is not responsible for business losses or data loss on the client's end.
+            """)
+        tos()
+
+with col_f2:
+    if st.button("Privacy Policy"):
+        @st.dialog("Privacy Policy")
+        def privacy():
+            st.write("""
+            **1. Data Collection:** We only collect your name and business details when you contact us via WhatsApp or Form.
+            **2. Usage:** Your data is only used to build your website and contact you. We never sell your data.
+            **3. DPDP Compliance:** In accordance with Indian laws, you can request us to delete your data at any time.
+            **4. Cookies:** We use basic cookies to make this Streamlit app run faster.
+            """)
+        privacy()
+
+with col_f3:
+    st.write("© 2026 Tenix Parent Company")
+
 with col_a:
     st.markdown(f"""
     <div class="service-card">
