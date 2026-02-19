@@ -174,14 +174,14 @@
         <h3>🏢 Dynamic Site</h3>
         <p>For Cafes & Gyms. Manage menus, prices, and member logins in real-time.</p>
         <div class="price-tag">starts at ₹3,999</div>
-        <a href="https://wa.me/919301868258?text=Interested%20in%20Hostel%20Management%20Suite" class="btn-wa">View Demo</a>
+        <a href="https://wa.me/919301868258?text=Interested%20in%20Dynamic%20Site" class="btn-wa">Order via WhatsApp</a>
     </div> 
     
     <div class="card">
         <h3>📊 Business Dashboard</h3>
         <p>Custom inventory and data portals for distributors and schools. Track your business from anywhere.</p>
         <div class="price-tag">Custom Pricing</div>
-        <a href="https://wa.me/919301868258?text=I%20want%20to%20consult%20about%20a%20Dashboard" class="btn-wa">Get a Quote</a>
+        <a href="https://wa.me/919301868258?text=I%20want%20to%20consult%20about%20a%20Dashboard" class="btn-wa">Consult the developer</a>
     </div>
 </div>
 
@@ -211,17 +211,10 @@
 
         if(type === 'terms') {
             title.innerText = "Terms of Service";
-            body.innerHTML = """1. Services: Tenix Digital provides web development services as described in the selected package.
-              <br> 2. Payments: A 50% advance is required to start. Final files/access are handed over upon 100% payment. 
-              <br>3. Hosting: We provide free hosting on community tiers. For custom domains or high-traffic needs, the client must pay third-party hosting costs. <br>
-              4. Liability: Tenix Digital is not responsible for business losses or data loss on the client's end.
-              <br>• Free support for the first 30 days.""";
+            body.innerHTML = "1. Services: Tenix Digital provides web development services as described in the selected package.<br> 2. Payments: A 50% advance is required to start. Final files/access are handed over upon 100% payment. <br>3. Hosting: We provide free hosting on community tiers. For custom domains or high-traffic needs, the client must pay third-party hosting costs. <br>4. Liability: Tenix Digital is not responsible for business losses or data loss on the client's end.<br>• Free support for the first 30 days.";
         } else {
             title.innerText = "Privacy Policy";
-            body.innerHTML = """1. Data Collection: We only collect your name and business details when you contact us via WhatsApp or Form. <br>
-              2. Usage: Your data is only used to build your website and contact you. We never sell your data. <br>
-              3. DPDP Compliance: In accordance with Indian laws, you can request us to delete your data at any time. <br>
-              4. Cookies: We use basic cookies to make this Streamlit app run faster.""";
+            body.innerHTML = "1. Data Collection: We only collect your name and business details when you contact us via WhatsApp or Form. <br>2. Usage: Your data is only used to build your website and contact you. We never sell your data. <br>3. DPDP Compliance: In accordance with Indian laws, you can request us to delete your data at any time. <br>4. Cookies: We use basic cookies to make this Streamlit app run faster.";
         }
         modal.style.display = "block";
     }
