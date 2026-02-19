@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenix Digital | Smart Business Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #007BFF;
+            --secondary: #003366;
+            --dark: #1a1a1a;
+            --light: #f4f7f6;
+            --white: #ffffff;
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* --- HEADER & HERO --- */
+        header {
+            background: var(--white);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .logo { height: 70px; margin-bottom: 15px; }
+        h1 { 
+            color: var(--primary); 
+            font-size: 3rem; 
+            margin: 0; 
+            font-weight: 800;
+            letter-spacing: -1.5px;
+        }
+        .tagline { color: var(--secondary); font-size: 1.2rem; font-weight: 500; margin-top: 5px; }
+
+        /* --- HERO IMAGE --- */
+        .hero-container {
+            max-width: 1000px;
+            margin: -30px auto 40px;
+            padding: 0 20px;
+        }
+        .hero-img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            display: block;
+        }
+
+        /* --- SERVICES SECTION --- */
+        .section-header { text-align: center; margin-bottom: 40px; }
+        .section-header h2 { font-size: 2rem; color: var(--secondary); margin-bottom: 10px; }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 24px;
+            border-top: 6px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .card h3 { font-size: 1.6rem; color: var(--secondary); margin-top: 0; }
+        .card p { flex-grow: 1; color: #555; margin-bottom: 20px; }
+        .card .price-tag { font-weight: 800; font-size: 1.1rem; margin-bottom: 20px; color: var(--dark); }
+
+        .btn-wa {
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 16px;
+            border-radius: 12px;
+            text-align: center;
+            font-weight: 700;
+            transition: background 0.2s;
+        }
+        .btn-wa:hover { background: #128C7E; }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #000000;
+            color: #ffffff;
+            padding: 80px 20px 40px;
+            text-align: center;
+            border-radius: 50px 50px 0 0;
+            margin-top: 100px;
+        }
+        .footer-nav { margin-bottom: 30px; }
+        .footer-nav a {
+            color: #aaa;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+        .footer-nav a:hover { color: white; }
+        .footer-brand { font-weight: 800; font-size: 1.4rem; margin-bottom: 10px; }
+        .copyright { color: #555; font-size: 0.9rem; margin-top: 30px; }
+
+        /* --- MODAL (Pop-up) --- */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(5px);
+        }
+        .modal-content {
+            background: white;
+            margin: 10% auto;
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 600px;
+            width: 90%;
+            position: relative;
+        }
+        .close-btn {
+            position: absolute;
+            right: 20px; top: 15px;
+            font-size: 30px; cursor: pointer; color: #999;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="Tenix Logo" class="logo">
+    <h1>Tenix Digital</h1>
+    <p class="tagline">Modern Tech for Local Growth.</p>
+</header>
+
+<div class="hero-container">
+    <img src="theme.png" alt="Agency Banner" class="hero-img">
+</div>
+
+<div class="section-header">
+    <h2>Our Digital Services</h2>
+</div>
+
+<div class="grid">
+    <div class="card">
+        <h3>📄 Static Site</h3>
+        <p>A professional 1-page digital brochure for doctors, shops, and clinics. Fast, secure, and always online.</p>
+        <div class="price-tag">Starts at ₹1,999</div>
+        <a href="https://wa.me/919301868258?text=I%20want%20to%20order%20a%20Static%20Site" class="btn-wa">Order via WhatsApp</a>
+    </div>
+
+    <div class="card">
+        <h3>🏢 Dynamic Site</h3>
+        <p>For Cafes & Gyms. Manage menus, prices, and member logins in real-time.</p>
+        <div class="price-tag">starts at ₹3,999</div>
+        <a href="https://wa.me/919301868258?text=Interested%20in%20Hostel%20Management%20Suite" class="btn-wa">View Demo</a>
+    </div> 
+    
+    <div class="card">
+        <h3>📊 Business Dashboard</h3>
+        <p>Custom inventory and data portals for distributors and schools. Track your business from anywhere.</p>
+        <div class="price-tag">Custom Pricing</div>
+        <a href="https://wa.me/919301868258?text=I%20want%20to%20consult%20about%20a%20Dashboard" class="btn-wa">Get a Quote</a>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-nav">
+        <a onclick="openModal('terms')">Terms of Service</a>
+        <a onclick="openModal('privacy')">Privacy Policy</a>
+    </div>
+    <div class="footer-brand">TENIX</div>
+    <p style="color:#888; margin: 5px 0;">Empowering the next generation of local entrepreneurs.</p>
+    <div class="copyright">© 2026 Tenix Digital. All rights reserved.</div>
+</footer>
+
+<div id="legalModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2 id="mTitle" style="color:var(--secondary);"></h2>
+        <div id="mBody" style="color:#444; line-height:1.8;"></div>
+    </div>
+</div>
+
+<script>
+    function openModal(type) {
+        const modal = document.getElementById('legalModal');
+        const title = document.getElementById('mTitle');
+        const body = document.getElementById('mBody');
+
+        if(type === 'terms') {
+            title.innerText = "Terms of Service";
+            body.innerHTML = """1. Services: Tenix Digital provides web development services as described in the selected package.
+              <br> 2. Payments: A 50% advance is required to start. Final files/access are handed over upon 100% payment. 
+              <br>3. Hosting: We provide free hosting on community tiers. For custom domains or high-traffic needs, the client must pay third-party hosting costs. <br>
+              4. Liability: Tenix Digital is not responsible for business losses or data loss on the client's end.
+              <br>• Free support for the first 30 days.""";
+        } else {
+            title.innerText = "Privacy Policy";
+            body.innerHTML = """1. Data Collection: We only collect your name and business details when you contact us via WhatsApp or Form. <br>
+              2. Usage: Your data is only used to build your website and contact you. We never sell your data. <br>
+              3. DPDP Compliance: In accordance with Indian laws, you can request us to delete your data at any time. <br>
+              4. Cookies: We use basic cookies to make this Streamlit app run faster.""";
+        }
+        modal.style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById('legalModal').style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('legalModal')) closeModal();
+    }
+</script>
+
+</body>
+</html>
