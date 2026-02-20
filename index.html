@@ -44,7 +44,7 @@
   display: block;
   transition: 0.3s;
 }
-.sidebar a:hover { background: #45A049; }
+.sidebar a:hover { background: #2196F3; }
 
 /* Close button */
 .sidebar .closebtn {
@@ -82,7 +82,7 @@
         header {
             background: var(--white);
             padding: 60px 20px;
-            text-align: center;
+            
             border-bottom: 1px solid #e0e0e0;
         }
         .logo { height: 70px; margin-bottom: 15px; }
@@ -275,7 +275,10 @@
 <!-- Main content -->
 <header>
     <img src="logo.png" alt="Tenix Logo" class="logo">
-    <h1>Tenix Digital</h1>
+    <h1 text align: centre>Tenix Digital</h1>
+    <div class="main">
+  <button class="openbtn" onclick="openSidebar()">☰</button>
+    </div>
     <p class="tagline">Modern Tech for Local Growth.</p>
     <script>
 function openSidebar() {
@@ -288,9 +291,6 @@ function closeSidebar() {
 }
     </script>
 </header>
-    <div class="main">
-  <button class="openbtn" onclick="openSidebar()">☰</button>
-    </div>
 <div class="hero-container">
     <img src="theme.png" alt="Agency Banner" class="hero-img">
 </div>
