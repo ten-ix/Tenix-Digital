@@ -4,52 +4,144 @@
     <meta charset="UTF-8">
     <title>Services | Tenix Digital</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --card: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, sans-serif;
+            background: var(--light);
+            color: var(--dark);
+        }
+
+        header {
+            text-align: center;
+            padding: 70px 20px;
+            background: linear-gradient(135deg, var(--primary), #1e40af);
+            color: white;
+        }
+
+        header h1 {
+            font-size: 2.6rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .services {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card);
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .card h2 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+
+        .badge {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 6px 12px;
+            background: #e0ecff;
+            color: var(--primary);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .cta {
+            text-align: center;
+            margin: 70px 0;
+        }
+
+        .cta a {
+            background: var(--primary);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 600;
+            box-shadow: 0 10px 25px rgba(37,99,235,0.35);
+        }
+    </style>
 </head>
 <body>
 
-<header class="page-header">
-    <h1>Our Services</h1>
-    <p>Simple, affordable digital solutions for local businesses</p>
+<header>
+    <h1>What We Do</h1>
+    <p>Affordable websites designed for real businesses</p>
 </header>
 
-<main class="content">
-    <section class="service-list">
+<section class="services">
+    <div class="card">
+        <h2>🌐 Static Website</h2>
+        <p>Fast, simple websites for shops, hostels and professionals.</p>
+        <span class="badge">Free Hosting</span>
+    </div>
 
-        <div class="service-card">
-            <h2>🌐 Static Website</h2>
-            <p>Clean, fast websites for shops, hostels, and professionals.</p>
-            <span class="badge">Free Hosting</span>
-        </div>
+    <div class="card">
+        <h2>🏢 Business Website</h2>
+        <p>Multi-page professional website with gallery & contact page.</p>
+        <span class="badge">One-time Cost</span>
+    </div>
 
-        <div class="service-card">
-            <h2>🏢 Business Website</h2>
-            <p>Multi-page website with services, gallery, and contact page.</p>
-            <p class="price">One-time cost • No monthly fee</p>
-        </div>
+    <div class="card">
+        <h2>📱 Mobile Friendly</h2>
+        <p>Your website looks perfect on phones and tablets.</p>
+    </div>
 
-        <div class="service-card">
-            <h2>📱 Mobile-Friendly Design</h2>
-            <p>Your site looks perfect on phones, tablets, and desktops.</p>
-        </div>
+    <div class="card">
+        <h2>🖼️ Content Setup</h2>
+        <p>We arrange text, images and layout professionally.</p>
+    </div>
 
-        <div class="service-card">
-            <h2>🖼️ Content & Image Setup</h2>
-            <p>We arrange text, photos, and layout professionally.</p>
-        </div>
+    <div class="card">
+        <h2>🔧 Small Changes</h2>
+        <p>Minor updates after delivery, no headache.</p>
+    </div>
 
-        <div class="service-card">
-            <h2>🔧 Minor Updates & Fixes</h2>
-            <p>Small text or image changes after delivery.</p>
-        </div>
+    <div class="card">
+        <h2>🚀 Google Ready</h2>
+        <p>Basic SEO so people can find your business online.</p>
+    </div>
+</section>
 
-        <div class="service-card">
-            <h2>🚀 Google Ready</h2>
-            <p>Basic SEO so your business can appear on Google search.</p>
-        </div>
-
-    </section>
-</main>
+<div class="cta">
+    <a href="https://wa.me/91XXXXXXXXXX">Discuss on WhatsApp</a>
+</div>
 
 </body>
 </html>
